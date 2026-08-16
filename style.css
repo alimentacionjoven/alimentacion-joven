@@ -744,12 +744,110 @@ img {
    TABLET
 ======================================== */
 
+/* ========================================
+   TABLET
+======================================== */
+
 @media (max-width: 900px) {
 
+    /* MENÚ DE ORDENADOR */
     .nav {
         display: none;
     }
 
+    .nav-button {
+        display: none;
+    }
+
+    /* CABECERA */
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    /* BOTÓN HAMBURGUESA */
+    .mobile-menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        border: none;
+        border-radius: 8px;
+
+        background: var(--green);
+        color: white;
+
+        font-size: 25px;
+        line-height: 1;
+
+        cursor: pointer;
+
+        transition:
+            background 0.2s,
+            transform 0.2s;
+    }
+
+    .mobile-menu-toggle:hover {
+        background: var(--green-dark);
+    }
+
+    /* MENÚ MÓVIL */
+    .mobile-nav {
+        display: none;
+
+        flex-direction: column;
+
+        background: white;
+
+        border-top: 1px solid #e9ece9;
+        border-bottom: 1px solid #e9ece9;
+
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-nav.active {
+        display: flex;
+    }
+
+    .mobile-nav a {
+        display: block;
+
+        padding: 16px 5%;
+
+        color: #38413b;
+
+        text-decoration: none;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        border-bottom: 1px solid #eef0ee;
+
+        transition:
+            background 0.2s,
+            color 0.2s;
+    }
+
+    .mobile-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-nav a:hover {
+        background: var(--green-light);
+        color: var(--green);
+    }
+
+    /* RESTO DE LA PÁGINA */
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -764,7 +862,6 @@ img {
 
     .about-grid {
         grid-template-columns: 1fr;
-
         gap: 50px;
     }
 
@@ -776,7 +873,12 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
+
 
 
 /* ========================================
