@@ -97,14 +97,6 @@ img {
     display: block;
 }
 
-.mobile-menu-toggle {
-    display: none;
-}
-
-.mobile-nav {
-    display: none;
-}
-
 .logo strong {
     display: block;
 
@@ -162,6 +154,19 @@ img {
 
 .nav-button:hover {
     background: var(--green-dark);
+}
+
+
+/* ========================================
+   MENÚ MÓVIL
+======================================== */
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
 }
 
 
@@ -328,7 +333,7 @@ img {
 
 
 /* ========================================
-   PRODUCTOS
+   CATEGORÍAS
 ======================================== */
 
 .category-grid {
@@ -411,6 +416,97 @@ img {
 
 
 /* ========================================
+   PRODUCTOS DESTACADOS
+======================================== */
+
+.featured-products {
+    padding: 110px 0;
+    background: #ffffff;
+}
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.product-card {
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #e9ece9;
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(20, 50, 30, 0.10);
+}
+
+.product-image {
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--green-light);
+
+    font-size: 75px;
+}
+
+.product-image img {
+    display: block !important;
+
+    width: 100% !important;
+    height: 190px !important;
+
+    max-width: none !important;
+
+    object-fit: cover !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.product-info p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.product-info strong {
+    color: var(--green);
+
+    font-size: 15px;
+}
+
+
+/* ========================================
    DESTACADO
 ======================================== */
 
@@ -462,6 +558,18 @@ img {
     justify-content: center;
 }
 
+.featured-decoration img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+
+    display: block;
+
+    border-radius: 18px;
+
+    object-fit: cover;
+}
+
 .basket {
     width: 260px;
     height: 260px;
@@ -489,9 +597,7 @@ img {
     padding: 110px 0;
 
     background: var(--cream);
-}
 
-.about-grid {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -521,6 +627,17 @@ img {
         0 25px 60px rgba(18, 61, 38, 0.15);
 }
 
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 520px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
 .about-image::before {
     content: "";
 
@@ -535,6 +652,10 @@ img {
 
     top: -80px;
     right: -80px;
+
+    z-index: 2;
+
+    pointer-events: none;
 }
 
 .about-image::after {
@@ -551,46 +672,10 @@ img {
 
     bottom: -70px;
     left: -50px;
-}
-
-.about-image-content {
-    position: absolute;
-
-    inset: 0;
 
     z-index: 2;
 
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    color: white;
-
-    text-align: center;
-}
-
-.about-image-content span {
-    font-size: 15px;
-
-    letter-spacing: 5px;
-
-    color: var(--gold);
-}
-
-.about-image-content strong {
-    font-size: 70px;
-
-    line-height: 1;
-
-    margin: 10px 0;
-}
-
-.about-image-content small {
-    letter-spacing: 3px;
-
-    opacity: 0.75;
+    pointer-events: none;
 }
 
 .about-content h2 {
@@ -749,8 +834,74 @@ img {
 
 
 /* ========================================
-   TABLET
+   WHATSAPP
 ======================================== */
+
+.whatsapp-button {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 14px 20px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+
+    transition: transform 0.2s, background 0.2s;
+}
+
+.whatsapp-button:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   GOOGLE MAPS
+======================================== */
+
+.map-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    background: var(--gold);
+    color: #17221b;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.map-button:hover {
+    background: #edbd52;
+
+    transform: translateY(-2px);
+}
+
 
 /* ========================================
    TABLET
@@ -758,7 +909,8 @@ img {
 
 @media (max-width: 900px) {
 
-    /* MENÚ DE ORDENADOR */
+    /* MENÚ ORDENADOR */
+
     .nav {
         display: none;
     }
@@ -767,7 +919,9 @@ img {
         display: none;
     }
 
+
     /* CABECERA */
+
     .nav-container {
         min-height: 68px;
     }
@@ -776,7 +930,9 @@ img {
         width: 110px;
     }
 
+
     /* BOTÓN HAMBURGUESA */
+
     .mobile-menu-toggle {
         display: flex;
 
@@ -808,7 +964,9 @@ img {
         background: var(--green-dark);
     }
 
+
     /* MENÚ MÓVIL */
+
     .mobile-nav {
         display: none;
 
@@ -852,13 +1010,19 @@ img {
 
     .mobile-nav a:hover {
         background: var(--green-light);
+
         color: var(--green);
     }
 
-    /* RESTO DE LA PÁGINA */
+
+    /* CATEGORÍAS */
+
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+    /* DESTACADO */
 
     .featured-container {
         grid-template-columns: 1fr;
@@ -868,8 +1032,12 @@ img {
         display: none;
     }
 
-    .about-grid {
+
+    /* NOSOTROS */
+
+    .about {
         grid-template-columns: 1fr;
+
         gap: 50px;
     }
 
@@ -877,16 +1045,25 @@ img {
         min-height: 400px;
     }
 
+    .about-image img {
+        min-height: 400px;
+    }
+
+
+    /* CONTACTO */
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* PRODUCTOS */
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
-
 
 
 /* ========================================
@@ -899,9 +1076,26 @@ img {
         width: min(92%, 1180px);
     }
 
-    .nav-button {
-        display: none;
+
+    /* CABECERA */
+
+    .nav-container {
+        min-height: 62px;
     }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .mobile-menu-toggle {
+        width: 42px;
+        height: 42px;
+
+        font-size: 24px;
+    }
+
+
+    /* HERO */
 
     .hero {
         min-height: 620px;
@@ -917,11 +1111,17 @@ img {
         font-size: 17px;
     }
 
+
+    /* SECCIONES */
+
     .categories,
     .about,
     .contact {
         padding: 75px 0;
     }
+
+
+    /* CATEGORÍAS */
 
     .category-grid {
         grid-template-columns: 1fr;
@@ -931,103 +1131,26 @@ img {
         height: 150px;
     }
 
+
+    /* DESTACADO */
+
     .featured {
         padding: 75px 0;
     }
+
+
+    /* NOSOTROS */
 
     .about-image {
         min-height: 330px;
     }
 
-    .about-image-content strong {
-        font-size: 55px;
+    .about-image img {
+        min-height: 330px;
     }
 
-}
 
-/* ========================================
-   PRODUCTOS DESTACADOS
-======================================== */
-
-.featured-products {
-    padding: 110px 0;
-    background: #ffffff;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
-
-.product-card {
-    overflow: hidden;
-    background: white;
-    border: 1px solid #e9ece9;
-    border-radius: 14px;
-
-    transition:
-        transform 0.25s,
-        box-shadow 0.25s;
-}
-
-.product-card:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 20px 45px rgba(20, 50, 30, 0.10);
-}
-
-.product-image {
-    height: 190px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--green-light);
-
-    font-size: 75px;
-}
-
-.product-info {
-    padding: 22px;
-}
-
-.product-info h3 {
-    font-size: 20px;
-    margin-bottom: 6px;
-}
-
-.product-info p {
-    color: var(--gray);
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.product-info strong {
-    color: var(--green);
-    font-size: 15px;
-}
-
-
-/* ========================================
-   PRODUCTOS · TABLET
-======================================== */
-
-@media (max-width: 900px) {
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-/* ========================================
-   PRODUCTOS · MÓVIL
-======================================== */
-
-@media (max-width: 600px) {
+    /* PRODUCTOS */
 
     .featured-products {
         padding: 75px 0;
@@ -1037,53 +1160,8 @@ img {
         grid-template-columns: 1fr;
     }
 
-}
 
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* ========================================
-   WHATSAPP
-======================================== */
-
-.whatsapp-button {
-    position: fixed;
-
-    right: 22px;
-    bottom: 22px;
-
-    z-index: 2000;
-
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    padding: 14px 20px;
-
-    background: #25D366;
-    color: white;
-
-    border-radius: 50px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
-
-    transition: transform 0.2s, background 0.2s;
-}
-
-.whatsapp-button:hover {
-    background: #1ebe5d;
-    transform: translateY(-3px);
-}
-
-@media (max-width: 600px) {
+    /* WHATSAPP */
 
     .whatsapp-button {
         right: 15px;
@@ -1094,33 +1172,4 @@ img {
         font-size: 14px;
     }
 
-}
-
-/* ========================================
-   GOOGLE MAPS
-======================================== */
-
-.map-button {
-    display: inline-block;
-
-    margin-top: 15px;
-
-    padding: 10px 18px;
-
-    background: var(--gold);
-    color: #17221b;
-
-    border-radius: 7px;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    transition: 0.2s;
-}
-
-.map-button:hover {
-    background: #edbd52;
-    transform: translateY(-2px);
 }
