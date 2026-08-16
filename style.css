@@ -97,6 +97,14 @@ img {
     display: block;
 }
 
+.mobile-menu-toggle {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
 .logo strong {
     display: block;
 
