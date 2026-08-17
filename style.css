@@ -229,7 +229,7 @@ img {
             rgba(10, 30, 18, 0.68) 45%,
             rgba(10, 30, 18, 0.18) 100%
         ),
-        url("imagenes/montoro.jpg");
+        url("imagenes/montoro.JPG");
 
     background-size: cover;
     background-position: center;
