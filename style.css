@@ -229,7 +229,7 @@ img {
             rgba(10, 30, 18, 0.68) 45%,
             rgba(10, 30, 18, 0.18) 100%
         ),
-        url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1800&q=85");
+        url("imagenes/montoro.jpg");
 
     background-size: cover;
     background-position: center;
