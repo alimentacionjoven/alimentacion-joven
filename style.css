@@ -1219,5 +1219,82 @@ img {
 
 }
 
+/* =========================================
+   CABECERA MÓVIL - AJUSTE FINAL
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Cabecera más compacta */
+    .header {
+        padding: 8px 0;
+    }
+
+    /* Zona del logo + botón */
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        min-height: 58px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo img {
+        display: block;
+        width: auto;
+        height: 52px;
+        max-width: 190px;
+        object-fit: contain;
+
+        /* Bordes redondeados */
+        border-radius: 14px;
+
+        /* Acabado más elegante */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Botón hamburguesa */
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 46px;
+        height: 46px;
+
+        margin: 0;
+        padding: 0;
+
+        border-radius: 12px;
+        flex-shrink: 0;
+
+        font-size: 25px;
+        line-height: 1;
+
+        cursor: pointer;
+    }
+
+    /* Menú móvil */
+    .mobile-nav {
+        margin-top: 4px;
+    }
+
+    /* Cuando está abierto */
+    .mobile-nav.active {
+        margin-top: 4px;
+    }
+
+}
+
 
 
