@@ -403,20 +403,32 @@ img {
 }
 
 .category-image {
-    height: 170px;
+    width: 100%;
+    height: 200px;
+
+    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 72px;
+    position: relative;
 }
 
 .category-image img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.04);
 }
 
 .fruits {
@@ -1138,7 +1150,7 @@ img {
     }
 
     .category-image {
-        height: 150px;
+        height: 190px;
     }
 
 
