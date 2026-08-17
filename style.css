@@ -1177,4 +1177,11 @@ img {
 
 }
 
+/* ESPACIADO SOBRE NOSOTROS EN MÓVIL */
+
+.about-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 
