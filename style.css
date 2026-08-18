@@ -1523,3 +1523,130 @@ img {
     }
 }
 
+/* =========================================
+   SECCIÓN REPARTO A DOMICILIO
+   ========================================= */
+
+.delivery-section {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #f5f8f1 0%, #ffffff 100%);
+}
+
+.delivery-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 45px 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #ffffff;
+    border-radius: 24px;
+    border: 2px solid rgba(75, 120, 55, 0.12);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+}
+
+.delivery-icon {
+    width: 115px;
+    height: 115px;
+    min-width: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef5e9;
+    border-radius: 50%;
+    font-size: 58px;
+}
+
+.delivery-content {
+    flex: 1;
+}
+
+.delivery-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #5d8a43;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.delivery-content h2 {
+    margin: 0 0 15px;
+    color: #2f4f25;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.delivery-content p {
+    margin: 0 0 12px;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.delivery-highlight {
+    color: #3f6232 !important;
+    font-weight: 600;
+}
+
+.delivery-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 15px;
+    padding: 13px 22px;
+    background: #5d8a43;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.delivery-button:hover {
+    background: #486d34;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(75, 120, 55, 0.25);
+}
+
+.delivery-button span {
+    font-size: 19px;
+}
+
+
+/* ----- MÓVIL ----- */
+
+@media (max-width: 700px) {
+    .delivery-section {
+        padding: 45px 15px;
+    }
+
+    .delivery-container {
+        padding: 32px 22px;
+        flex-direction: column;
+        text-align: center;
+        gap: 22px;
+    }
+
+    .delivery-icon {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        font-size: 45px;
+    }
+
+    .delivery-content h2 {
+        font-size: 26px;
+    }
+
+    .delivery-content p {
+        font-size: 16px;
+    }
+
+    .delivery-button {
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
