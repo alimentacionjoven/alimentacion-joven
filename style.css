@@ -1114,7 +1114,7 @@ img {
     }
 
 
-    
+
 
 
     /* CATEGORÍAS */
@@ -1506,5 +1506,20 @@ img {
 
 }
 
+@media (max-width: 900px) {
+    .featured-decoration {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
 
+    .featured-decoration img {
+        display: block !important;
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        border-radius: 18px;
+    }
+}
 
