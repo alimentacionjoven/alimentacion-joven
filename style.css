@@ -695,20 +695,15 @@ img {
 
 .featured-decoration {
     display: flex;
-
-    align-items: center;
-    justify-content: center;
+    margin-top: 30px;
 }
 
 .featured-decoration img {
     width: 100%;
     max-width: 420px;
     height: auto;
-
     display: block;
-
     border-radius: 18px;
-
     object-fit: cover;
 }
 
