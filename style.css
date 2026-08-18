@@ -1648,5 +1648,83 @@ img {
         width: 100%;
         box-sizing: border-box;
     }
+
+/* REPARTO A DOMICILIO - VISIBILIDAD EN MOVIL */
+
+.delivery-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 45px 15px;
+    background: #f5f8f1;
+}
+
+.delivery-container {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    max-width: 1050px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 30px 20px;
+    align-items: center;
+    gap: 25px;
+    background: #fff;
+    border-radius: 24px;
+}
+
+.delivery-icon {
+    display: flex !important;
+    visibility: visible !important;
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    align-items: center;
+    justify-content: center;
+    background: #eef5e9;
+    border-radius: 50%;
+    font-size: 45px;
+}
+
+.delivery-content {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 700px) {
+    .delivery-section {
+        display: block !important;
+        padding: 40px 15px !important;
+    }
+
+    .delivery-container {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 30px 20px !important;
+    }
+
+    .delivery-content {
+        width: 100% !important;
+    }
+
+    .delivery-content h2 {
+        font-size: 25px !important;
+    }
+
+    .delivery-content p {
+        font-size: 16px !important;
+    }
+
+    .delivery-button {
+        display: inline-flex !important;
+    }
+}
+
+    }
 }
 
