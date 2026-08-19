@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alimentacionjoven.github.io/alimentacion-joven/sitemap.xml
